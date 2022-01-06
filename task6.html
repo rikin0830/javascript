@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    Fname: <br>
+    <input type="text" name="Fname" id="fname"><br>
+    Mname: <br>
+    <input type="text" name="Mname" id="Mname"><br>
+    Lname: <br>
+    <input type="text" name="Lname" id="Lname"><br><br>
+
+
+    <select id="countryid" style="width: 150px;" onclick="countrychange(event)">
+    </select>
+    <select id="stateid" style="width: 150px;" onclick="statechange(event)">
+    </select>
+    <select style="width: 150px;" id="cityid">
+    </select>
+
+    <br><br>
+    Birthdate :
+    <input type="date" id="Dob">
+    <br><br>
+    Gender :
+    <form name="myForm">
+        <input type="radio" id="genderm" name="gender" value="male" />
+        <label for="genderm">Male</label>
+        <input type="radio" id="genderf" name="gender" value="female" />
+        <label for="genderf">Female</label>
+    </form>
+    <input type="checkbox" id="married">
+    <label for="married"> IS MARRIED? </label><br><br>
+
+    <input type="submit" onclick="submitfun()">
+
+
+    <table id="table">
+        <tr>
+
+            <th>FirstName</th>
+            <th>MiddelName</th>
+            <th>LastName</th>
+            <th>County</th>
+            <th>State</th>
+            <th>City</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>meriedStutus</th>
+
+        </tr>
+    </table>
+    <script src="index.js"></script>
+</body>
+
+</html>

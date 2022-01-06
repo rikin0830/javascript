@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 3&4</title>
+</head>
+
+<body>
+
+    <select id="select" onchange="chngefun(event)"></select>
+    <label id="label"></label>
+
+    <script>
+        const topic = {
+            Name: "Rikin",
+            surname: "Kajavadra",
+            city: "surat",
+            county: "india",
+            value: 25,
+            hoby: "vbo",
+            test: "123"
+        };
+        myfun();
+
+        function myfun() {
+            let ddlvalu = Object.keys(topic)
+            ddlvalu.map((e) => {
+                node = document.createElement("option");
+                textnode = document.createTextNode(e);
+                node.appendChild(textnode);
+                document.getElementById("select").appendChild(node);
+
+            })
+        }
+
+        function chngefun(event) {
+            let val = event.target.value;
+            document.getElementById("label").innerHTML = topic[val];
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    select country :
+    <select id="countryid" onclick="countrychange(event)">
+        <option>select country</option>
+    </select><br><br><br> select state :
+    <select id="stateid" onclick="statechange(event)">
+        <option value="">select state</option>
+    </select><br><br><br> city:
+    <select style="width: 100px;" id="cityid">
+        <option>select city</option>
+    </select><br><br>
+
+    <input type="submit" onclick="window.location.reload()">
+
+
+
+    <script>
+        const dropdown = {
+            India: {
+                Maharashtra: ['Pune', 'Mumbai', 'Nagpur', 'Akola'],
+                MadhyaPradesh: ['Indore', 'Bhopal', 'Jabalpur'],
+                Rajasthan: ['Jaipur', 'Ajmer', 'Jodhpur'],
+                Gujrat: ['surat', 'Bhavangar', 'Vapi']
+            },
+            USA: {
+                Alabama: ['Montgomery', 'Birmingham'],
+                California: ['Sacramento', 'Fremont'],
+                Illinois: ['Springfield', 'Chicago']
+            },
+            Australia: {
+                NewSouthWales: ['Sydney', 'Newcastle', 'Central Coast'],
+                victoria: ['Melbourne', 'Geelong', 'Ballarat']
+            },
+            canada: {
+                BritishColumbia: ['vancouver', 'victoria'],
+                ontario: ['toronto', 'ottawa', 'london']
+            }
+        };
+
+
+
+        let list = Object.keys(dropdown)
+        list.map((e) => {
+            node = document.createElement("option")
+            textnode = document.createTextNode(e);
+            node.appendChild(textnode);
+            document.getElementById("countryid").appendChild(node);
+        })
+
+        function countrychange(event) {
+            debugger
+            document.getElementById("stateid").innerHTML = ""
+            document.getElementById("cityid").innerHTML = ""
+            let country = event.target.value;
+            let state = Object.keys(dropdown[country]);
+
+            state.map((e) => {
+                node1 = document.createElement("option")
+                textnode1 = document.createTextNode(e);
+                node1.appendChild(textnode1);
+                document.getElementById("stateid").appendChild(node1);
+            })
+        }
+
+        function statechange(event) {
+            debugger
+            document.getElementById("cityid").innerHTML = ""
+            let country = document.getElementById("countryid").value;
+            let state = document.getElementById("stateid").value;
+
+            var sel_con = dropdown[country];
+            var sel_sta = sel_con[state];
+
+            sel_sta.map((e) => {
+                node1 = document.createElement("option")
+                textnode1 = document.createTextNode(e);
+                node1.appendChild(textnode1);
+                document.getElementById("cityid").appendChild(node1);
+            })
+        }
+    </script>
+</body>
+
+
+
+
+</html>

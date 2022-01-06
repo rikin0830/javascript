@@ -1,0 +1,41 @@
+#table {
+    border: 2px solid black;
+}
+
+th {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 80%;
+    margin-top: 50px;
+    margin-left: 10%;
+}
+
+label {
+    margin-right: 10px;
+}
+
+#afteredit {
+    display: none;
+}
+
+.output {
+    margin-left: 45%;
+}

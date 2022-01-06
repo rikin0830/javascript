@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div id="mainForm">
+            <form class="myform" name="myForm">
+                <label class="Fname">Fname:</label>
+                <input type="text" name="Fname" id="fname"><br><br>
+                <label for="  Mname:">Mname:</label>
+                <input type="text" name="Mname" id="Mname"><br><br>
+                Lname:
+                <input type="text" name="Lname" id="Lname"><br><br>
+
+                Country:
+                <select id="countryid" style="width: 150px;" onclick="countrychange(event)">
+                </select><br><br>
+                State:
+                <select id="stateid" style="width: 150px;" onclick="statechange(event)">
+                </select><br> <br>
+                City :
+                <select style="width: 150px;" id="cityid">
+                </select><br>
+
+                <br>
+                Birthdate :
+                <input type="date" id="Dob">
+                <br><br>
+                Gender :
+
+                <input type="radio" id="genderm" name="gender" value="male" />
+                <label for="genderm">Male</label>
+                <input type="radio" id="genderf" name="gender" value="female" />
+                <label for="genderf">Female</label><br><br>
+
+
+
+                <label><input id="checkbox" type='checkbox' onchange="handleClick(this)" value="No"> Married ?</label>
+
+
+            </form><br>
+            <div class="submit">
+                <input id="submit" type="submit" onclick="submitfun()">
+            </div>
+        
+    </div>
+
+    <hr>
+
+    <table id="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>FirstName</th>
+                <th>MiddelName</th>
+                <th>LastName</th>
+                <th>County</th>
+                <th>State</th>
+                <th>City</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>meriedStutus</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="index6.js"></script>
+</body>
+
+</html>

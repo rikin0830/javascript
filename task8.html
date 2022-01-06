@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Expense Tracker</title>
+        
+        <style type="text/css">
+            table
+            {
+                display: none;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>Expense Tracker</h1>
+        
+        <form action="">
+            <label for="date">Date: </label>
+            <input type="date" id="date">
+            <br>
+            
+            <label for="desc">Description: </label>
+            <input type="text" id="desc">
+            <br>
+            
+            <label for="amount">Amount: </label>
+            <input type="text" id="amount">
+            <br>
+            
+            <input type="button" id="submit" value="Submit">
+            <br>
+        </form>
+        
+        <table id="table">
+            <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Amount</th>
+            </tr>
+        </table>
+    
+        <script type="text/javascript">
+            
+            document.getElementById("submit").onclick=function()
+            {
+                document.getElementById("table").style.display="block";
+                
+                var table = document.getElementById("table");
+                var row = table.insertRow(-1);
+                var date = row.insertCell(0);
+                var desc = row.insertCell(1);
+                var amt = row.insertCell(2);
+                date.innerHTML = document.getElementById("date").value;
+                desc.innerHTML = document.getElementById("desc").value;
+                amt.innerHTML = document.getElementById("amount").value;
+                
+                return false;
+            }
+        
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+cell1.innerHTML = e.Fname;
+let cell2 = row.insertCell(1);
+cell2.innerHTML = e.Mname;
+let cell2 = row.insertCell(2);
+cell2.innerHTML = e.lname;
+let cell2 = row.insertCell(3);
+cell2.innerHTML = e.Mname;
+let cell2 = row.insertCell(4);
+cell2.innerHTML = e.county;
+let cell2 = row.insertCell(5);
+cell2.innerHTML = e.state;
+let cell2 = row.insertCell(6);
+cell2.innerHTML = e.city;
+let cell2 = row.insertCell(7);
+cell2.innerHTML = e.Dob;

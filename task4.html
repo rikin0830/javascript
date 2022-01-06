@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 4</title>
+</head>
+
+<body>
+
+    <select id="select" onchange="chngefun(event)"></select>
+    <input type="text" id="textbox" >
+    <input type="submit" id="submit" onclick="updateJSON()">
+
+    <script>
+        const topic = {
+            Name: "Rikin",
+            surname: "Kajavadra",
+            city: "surat",
+            county: "india",
+            value: 25,
+            hoby: "vbo"
+
+
+        };
+        myfun();
+        function myfun() {
+            let dropdownKeys = Object.keys(topic)
+            dropdownKeys.map((e) => {
+                node = document.createElement("option");
+                textnode = document.createTextNode(e);
+                node.appendChild(textnode);
+                document.getElementById("select").appendChild(node);
+
+            })
+        }
+        function chngefun(event) {
+            
+            let val = event.target.value;
+            document.getElementById("textbox").value = topic[val];
+        
+        }
+        function updateJSON() {
+            let Key = document.getElementById("select")
+            let textboxvalue = document.getElementById("textbox").value
+            topic[Key.value]= textboxvalue
+           console.log(topic)
+        }
+    
+
+    </script>
+
+
+</body>
+
+</html>

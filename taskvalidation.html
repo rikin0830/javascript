@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div id="mainForm">
+        <form class="myform" name="myForm">
+            <label class="Fname">Fname:</label>
+            <input type="text" name="Fname" id="fname"><br><br>
+            <label for="  Mname:">Mname:</label>
+            <input type="text" name="Mname" id="Mname"><br><br>
+            <label for="Lname">Lname: </label>
+            <input type="text" name="Lname" id="Lname"><br><br>
+
+            <label class="Country">Country:</label>
+            <select id="countryid" style="width: 150px;" onclick="countrychange(event)">
+                
+            </select><br><br>
+            <label for="State">State :</label>
+            <select id="stateid" style="width: 150px;" onclick="statechange(event)">
+            </select><br> <br>
+            <label for="city">City :</label>
+            <select style="width: 150px;" id="cityid">
+            </select><br>
+
+            <br> Birthdate :
+            <input type="date" min="1997-01-01" max="2021-12-31" id="Dob">
+            <br><br> Gender :
+
+            <input type="radio" id="gender" name="gender" value="male" />
+            <label for="genderm">Male</label>
+            <input type="radio" id="gender" name="gender" value="female" />
+            <label for="genderf">Female</label><br><br>
+
+
+
+            <label id="uncheck"> Married</label>
+            <input id="checkbox" type='checkbox' onclick="handleClick()" value="No">
+
+
+        </form><br>
+        <div class="submit">
+            <input id="submit" type="submit" onclick="submitfun()">
+            <button onclick="update(updateid)" id="afteredit">Update</button>
+        </div>
+
+    </div>
+
+    <hr>
+    <!-- <button onclick=""></button> -->
+    <div class="output">
+        <button class="selectAll" id="selectAll" onclick="selectAll(this)">SELECT All</button>
+        <button class="selectAll" id="selectAll" onclick="selectedDlt()">DELETE</button>
+    </div>
+
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Multiple Selection</th>
+                <th>ID</th>
+                <th>FirstName</th>
+                <th>MiddelName</th>
+                <th>LastName</th>
+                <th>County</th>
+                <th>State</th>
+                <th>City</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>meriedStutus</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="validation.js"></script>
+</body>
+
+</html>

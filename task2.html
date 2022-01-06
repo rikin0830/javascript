@@ -1,0 +1,63 @@
+<!-- json drop down -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="select">
+        <option value="">Select me</option>
+    </select>
+    <script>
+        const topic = {
+            Name: "Rikin",
+            surname: "Kajavadra",
+            city: "surat",
+            county: "india",
+            value: 25,
+            hoby: "vbo",
+            ABC: "",
+
+        };
+        drop();
+
+        function drop() {
+            let ddl = Object.keys(topic)
+            ddl.map((e) => {
+                node = document.createElement("option")
+                textnode = document.createTextNode(e);
+                node.appendChild(textnode);
+                document.getElementById("select").appendChild(node);
+            })
+        }
+
+        // window.onload = function(){
+        //     let topiclist = document.getElementById("select")
+        //     for(var x in topic){
+        //         topiclist.options[topiclist.options.length] = new Option(x,x)
+        //     }
+
+
+        // }
+
+        // text = " "
+        // for (let i in topic) {
+
+        // }
+        // for(let x=0;x<=l;x++){
+        //     for(var i in topic){
+        //         key += i ;
+        //     }
+        //     document.getElementById("optio").innerHTML=key;
+
+        // }
+    </script>
+</body>
+
+</html>
